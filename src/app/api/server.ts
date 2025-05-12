@@ -1,7 +1,5 @@
-const db = require('pg-promise')();
+import { Pool } from "pg";
 
-const dbConfig = {
+export const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-};
-
-const dbInstance = db(dbConfig);
+});
